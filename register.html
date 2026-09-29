@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="64" height="64">
+            <circle
+              cx="24"
+              cy="32"
+              r="20"
+              fill="none"
+              stroke="#d946ef"
+              stroke-width="4"
+            />
+            <circle
+              cx="40"
+              cy="32"
+              r="20"
+              fill="none"
+              stroke="#d946ef"
+              stroke-width="4"
+            />
+            <path
+              d="M32 14.5a20 20 0 0 1 0 35 20 20 0 0 1 0-35z"
+              fill="#d946ef"
+            />
+          </svg>
+        </div>
+
+        <h1>Register Here</h1>
+
+        <form id="registerForm" novalidate>
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full Name"
+              autocomplete="name"
+              required
+            />
+            <small class="error" id="nameError" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              autocomplete="email"
+              required
+            />
+            <small class="error" id="emailError" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                autocomplete="new-password"
+                required
+              />
+              <button
+                type="button"
+                class="toggle"
+                data-target="password"
+                aria-label="Show password"
+              >
+                Show
+              </button>
+            </div>
+            <small class="error" id="passwordError" role="alert"></small>
+          </div>
+
+          <div class="field">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="password-wrap">
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm Password"
+                autocomplete="new-password"
+                required
+              />
+              <button
+                type="button"
+                class="toggle"
+                data-target="confirmPassword"
+                aria-label="Show password"
+              >
+                Show
+              </button>
+            </div>
+            <small class="error" id="confirmError" role="alert"></small>
+          </div>
+
+          <button type="submit" class="btn">Register</button>
+          <p class="status" id="formStatus" role="status"></p>
+        </form>
+
+        <nav class="links">
+          <a href="index.html">Already have an account? Login</a>
+        </nav>
+      </section>
+    </main>
+
+    <script src="register.js"></script>
+  </body>
+</html>
